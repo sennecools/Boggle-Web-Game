@@ -2,17 +2,23 @@
 .cell {
     width: 50px;
     height: 50px;
-    border: 1px solid black;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
+    margin: 5px;
 }
 
 /* CSS for the board container */
 #board {
+    background-color: lightgray;
     display: flex;
     flex-wrap: wrap;
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
     margin: 10px;
+}
+
+/* CSS for the letter buttons */
+.cell button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
 }
