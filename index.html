@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,63 +8,66 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Boggle</title>
 </head>
+
 <body>
     <h1>Boggle Game</h1>
-	<div id="board">
-		<div class="cell">
+    <div id="timer"></div>
+    <div id="board">
+        <div class="cell">
             <button data-square="1" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="2" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="3" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="4" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="5" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="6" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="7" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="8" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="9" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="10" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="11" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="12" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="13" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="14" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="15" class="letterButton" type="button">A</button>
         </div>
-		<div class="cell">
+        <div class="cell">
             <button data-square="16" class="letterButton" type="button">A</button>
         </div>
-	</div>
-    <button class="letterButton" type="button" id="shuffle">shuffle</button>
-    <button type="button" id="addWord">Add word</button>
+    </div>
+    <button class="shuffle" type="button" id="shuffle">shuffle</button>
+    <button type="button" disabled id="addWord">Add word</button>
     <button type="button" id="undo">Undo</button>
-    <div id="timer"></div>
+    <div id="resultaat"></div>
     <div id="word"></div>
     <script src="js/scripts.js"></script>
 </body>
+
 </html>

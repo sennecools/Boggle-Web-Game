@@ -1,0 +1,39 @@
+/* Center the content */
+body {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  /* Style the heading */
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+.button {
+    background-color: #c8d8e4;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    border: 0.1rem solid rgb(0, 0, 0);
+    border-radius: 2rem;
+    display: inline-block;
+    font-family: 'Bad Script', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    padding: 1rem 2rem;
+    text-decoration: solid;
+    width: 20rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: rgb(25, 117, 183);
+    color: rgb(0, 0, 0);
+    transition: 400ms;
+}
