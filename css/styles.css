@@ -1,37 +1,61 @@
 /* CSS for the board cells */
 .cell {
-    width: 80px;
     height: 80px;
     margin: 5px;
+    width: 80px;
 }
 
 /* CSS for the board container */
 #board {
     background-color: #93CAED;
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-    width: 360px;
     height: 360px;
     margin: 10px;
-    border-radius: 10px;
+    width: 360px;
 }
 
 /* CSS for the letter buttons */
 .letterButton {
     background-color: rgb(255, 255, 255);
-    width: 80px;
-    height: 80px;
+    border-radius: 5px;
+    color: #93CAED;
     font-size: 45px;
     font-weight: bold;
-    border-radius: 5px;
+    height: 80px;
     transition-duration: 0.2s;
-    color: #93CAED;
+    width: 80px;
 }
 
 .pressed {
     background-color: #EBECF0;
 }
 
+/* Title */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
+
+/* Timer */
+#timer {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
 #word {
     display: none;
+}
+
+#addWord, #undo {
+    background-color: #2196F3;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
 }

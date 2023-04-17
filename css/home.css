@@ -1,11 +1,11 @@
 /* Center the content */
 body {
+    align-items: center;
     background-color: aquamarine;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     flex-direction: column;
+    height: 100vh;
+    justify-content: center;
   }
 
   /* Style the heading */
@@ -15,24 +15,24 @@ body {
     text-align: center;
   }
 
-.button {
+button {
     background-color: #c8d8e4;
     background-repeat: no-repeat;
     background-size: 3rem;
-    border: 0.1rem solid rgb(0, 0, 0);
     border-radius: 2rem;
+    border: 0.1rem solid rgb(0, 0, 0);
+    cursor: pointer;
     display: inline-block;
     font-family: 'Bad Script', cursive;
     font-size: 1.8rem;
     margin-bottom: 10px;
     padding: 1rem 2rem;
+    text-align: center;
     text-decoration: solid;
     width: 20rem;
-    cursor: pointer;
-    text-align: center;
 }
 
-.button:hover {
+button:hover {
     background-color: rgb(25, 117, 183);
     color: rgb(0, 0, 0);
     transition: 400ms;
