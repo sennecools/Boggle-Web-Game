@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  },
+  "name": "boggle-groep3",
+  "description": "- Academiejaar: 2022-2023\r - Opleiding: Toegepaste Informatica\r - Naam: MervanCohadar, Nathan Batiteyau-Ndengo, Senne Cools, Glenn Servranckx, Wacil Abalhaji",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sennecools/Boggle-groep3.git"
+  },
+  "author": "Senne Cools",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sennecools/Boggle-groep3/issues"
+  },
+  "homepage": "https://github.com/sennecools/Boggle-groep3#readme"
+}

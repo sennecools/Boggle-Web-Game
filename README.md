@@ -2,4 +2,4 @@
 
 - Academiejaar: 2022-2023
 - Opleiding: Toegepaste Informatica
-- Naam: MervanCohadar, Nathan Batiteyau-Ndengo, Senne Cools, Glenn Servranckx
+- Naam: MervanCohadar, Nathan Batiteyau-Ndengo, Senne Cools, Glenn Servranckx, Wacil Abalhaji
