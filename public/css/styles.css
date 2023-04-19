@@ -1,16 +1,52 @@
+/*
+*********************************************
+*                                           *
+*                   body                    *
+*                                           *
+*********************************************
+*/
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: aquamarine;
 }
 
-/* CSS for the board cells */
+#word {
+    display: none;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#timer {
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+#resultaat {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 26px;
+}
+
+/*
+*********************************************
+*                                           *
+*                   board                   *
+*                                           *
+*********************************************
+*/
+
 .cell {
     height: 80px;
     margin: 5px;
     width: 80px;
 }
 
-/* CSS for the letter buttons */
 .letterButton {
     background-color: #f0f0f0;
     border-radius: 10px;
@@ -23,27 +59,45 @@ body {
     border: 0px solid #ccc;
     box-shadow: -2px -4px 8px rgb(255 255 255 / 60%), 2px 4px 8px rgb(0 0 0 / 30%);
     position: relative;
+    text-transform: capitalize;
 }
+
+#woorden {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 0px solid #ccc;
+    height: 416px;
+    width: auto;
+    overflow-y: scroll;
+    overflow: auto;
+    padding: 15px;
+    margin-left: 50px;
+    color: #2D5377;
+    font-size: 24px;
+    box-shadow: inset -2px -4px 8px #fff, inset 2px 3px 8px rgb(0 0 0 / 50%);
+}
+
+#board {
+    margin: 50 auto;
+    margin-left: 39%;
+}
+
+#bigboard {
+    display: flex;
+}
+
+/*
+*********************************************
+*                                           *
+*                   buttons                 *
+*                                           *
+*********************************************
+*/
 
 .pressed {
-    background-color: #b1adad;
+    box-shadow: inset -2px -4px 8px #fff, inset 2px 3px 8px rgb(0 0 0 / 50%);
 }
 
-/* Title */
-h1 {
-    font-size: 3rem;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-/* Timer */
-#timer {
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-align: center;
-}
-
-/* Buttons */
 .buttons {
     text-align: center;
     margin-top: 50px;
@@ -71,47 +125,8 @@ h1 {
     background-color: rgb(71, 82, 196);
 }
 
-/* tekst onder buttons */
-#word {
-    display: none;
-}
-
-#resultaat {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 26px;
-}
-
-#woorden {
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    height: 400px;
-    max-width: auto;
-    min-width: 120px;
-    overflow-y: scroll;
-    overflow: auto;
-    padding: 10px;
-    text-transform: lowercase;
-    margin-left: 50px;
-}
-
-
-#bigboard {
-    display: flex;
-    margin-left: 30%;
-    margin-right: 20%;
-}
-
 #addWord:disabled, #undo:disabled {
     background-color: #105e9e;
-}
-
-#container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 /*

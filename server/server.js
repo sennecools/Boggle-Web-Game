@@ -1,15 +1,13 @@
-const express = require("express");
-const socket = require("socket.io");
-const http = require("http");
+const WebSocket = require('ws'); const server = new WebSocket.Server({ port: 8080 });
 
-const app = express();
-const PORT = 2053 || process.env.PORT;
-const server = http.createServer(app);
+function startMultiplayer() {
+    if (!isConnected) {
+        socket = new WebSocket('linkvandewebsite');
 
-// Set static folder
-app.use(express.static("public"));
-
-// Socket setup
-const io = socket(server);
-
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+        socket.addEventListener('open', (event) => {
+            console.log('Connection established with Websocket');
+            isConnected = true;
+            sendJoinMessage();
+        });
+    }
+}

@@ -45,7 +45,7 @@ boardButtons.forEach(button => {
 
 // Geeft elke button een random letter als er teveel medeklinkers zijn worden er klinkers bijgevoegd
 function shuffleLetters() {
-    const letters = ["A", "A", "A", "B", "C", "D", "E", "E", "E", "E", "F", "G", "H", "I", "I", "I", "J", "K", "L", "M", "N", "O", "O", "O", "O", "P", "R", "S", "T", "T", "U", "U", "V", "W", "X", "Y", "Z"];
+    const letters = ["a", "a", "a", "b", "c", "d", "e", "e", "e", "e", "f", "g", "h", "i", "i", "i", "j", "k", "l", "m", "n", "o", "o", "o", "o", "p", "r", "s", "t", "t", "u", "u", "v", "w", "x", "y", "z"];
     const buttons = document.querySelectorAll('.letterButton');
 
     for (let i = 0; i < buttons.length; i++) {
@@ -122,9 +122,9 @@ async function addWordButton() {
         }
         wordPointsArray.push({ word: word, points: points });
         totalPoints = wordPointsArray.reduce((acc, curr) => acc + curr.points, 0);
-        let output = "";
+        let output = "Wordlist | Points\n\n";
         for (let i = 0; i < wordPointsArray.length; i++) {
-            output += `wordlist | points\n\nWord ${i + 1}: ${wordPointsArray[i].word}, Points: ${wordPointsArray[i].points}\n`;
+            output += `Word ${i + 1}: ${wordPointsArray[i].word}, Points: ${wordPointsArray[i].points}\n`;
         }
         woordDiv.innerText = output;
         console.log(wordPointsArray);
