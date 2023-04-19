@@ -86,18 +86,19 @@ function undoButton() {
 async function addWordButton() {
     let points;
     let word = wordDiv.textContent;
+    const woordDiv = document.querySelector(`#woorden`)
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     const resp = await fetch(url);
     const data = await resp.json();
     console.log(data);
 
     if (data.title == "No Definitions Found") {
-        resultaat.innerText = `${word}: woord bestaat niet`;
+        resultaat.innerText = `${word}: word doesn't exist`;
         undoButton();
     } else {
         const existingWord = wordPointsArray.find(w => w.word === word);
         if (existingWord) {
-            resultaat.innerText = `${word}: woord is al gebruikt`;
+            resultaat.innerText = `${word}: word is has already been used`;
             undoButton();
             return;
         }
@@ -120,12 +121,16 @@ async function addWordButton() {
         }
         wordPointsArray.push({ word: word, points: points });
         totalPoints = wordPointsArray.reduce((acc, curr) => acc + curr.points, 0);
+        let output = "";
+        for (let i = 0; i < wordPointsArray.length; i++) {
+            output += `Word ${i + 1}: ${wordPointsArray[i].word}, Points: ${wordPointsArray[i].points}\n`;
+        }
+        woordDiv.innerText = output;
         console.log(wordPointsArray);
         console.log(totalPoints);
         undoButton();
     }
 }
-
 
 letterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -200,7 +205,7 @@ letterButtons.forEach(button => {
 });
 
 // Timer van 3 minuten als de timer gedaan is worden alle buttons gedisabled
-const duration = 3;
+const duration = 180;
 const timerEl = document.querySelector('#timer');
 let timeLeft = duration;
 
@@ -225,3 +230,10 @@ const countdownInterval = setInterval(() => {
         }, 500);
     }
 }, 1000);
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        console.log("Hello, World!");
+        // submit function
+    }
+});

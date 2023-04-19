@@ -13,17 +13,23 @@
     <div id="login">
         <h2>Login</h2>
         <form>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <div id="mail">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div id="pass">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
             <button type="submit" id="buttonlogin">Login</button>
         </form>
     </div>
     <div id="start">
         <h1>Let's Boggle together!</h1>
-        <button type="button" class="startButton">Let's start</button>
-        <button type="button" class="popupButton">Rules</button>
+        <div class="buttons">
+            <button type="button" class="startButton" id="button1">Let's start</button>
+            <button type="button" class="popupButton" id="button2">Rules</button>
+        </div>
     </div>
 
     <script src="js/home.js"></script>

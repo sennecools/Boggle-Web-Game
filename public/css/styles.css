@@ -10,6 +10,7 @@
     background-color: #93CAED;
     border-radius: 10px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     height: 360px;
     margin: 0 auto; /* Center the board horizontally */
@@ -72,4 +73,21 @@ h1 {
     display: block;
     margin: 20px auto 0; /* Center the divs horizontally */
     text-align: center; /* Center the text inside the divs */
+}
+
+#woorden {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-transform: lowercase;
+    max-width: auto;
+    height: 360px;
+    min-width: 120px;
+}
+
+#bigboard{
+    display: flex;
+    margin-left: 30%;
+    margin-right: 20%;
 }
