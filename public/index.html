@@ -5,75 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Boggle</title>
+    <link rel="stylesheet" href="css/home.css">
+    <title>Home</title>
 </head>
 
 <body>
-    <h1>Boggle Game</h1>
-    <div id="timer"></div>
-    <div id="multiplayer"></div>
-    <div id="bigboard">
-        <div id="board">
-            <div class="cell">
-                <button data-square="1" class="letterButton" type="button">A</button>
+    <div id="login">
+        <h2>Login</h2>
+        <form>
+            <div id="mail">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
             </div>
-            <div class="cell">
-                <button data-square="2" class="letterButton" type="button">A</button>
+            <div id="pass">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
             </div>
-            <div class="cell">
-                <button data-square="3" class="letterButton" type="button">A</button>
+            <div id="loginError"></div>
+            <div id="homebuttons">
+                <button type="submit" disabled id="buttonlogin">Login</button>
+                <button type="button" class="popupButton2">About</button>
             </div>
-            <div class="cell">
-                <button data-square="4" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="5" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="6" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="7" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="8" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="9" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="10" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="11" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="12" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="13" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="14" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="15" class="letterButton" type="button">A</button>
-            </div>
-            <div class="cell">
-                <button data-square="16" class="letterButton" type="button">A</button>
-            </div>
+        </form>
+    </div>
+    <div class="hidden" id="start">
+        <h1>Let's Boggle together!</h1>
+        <div class="buttons">
+            <button type="button" class="startButton" id="button1">Let's start</button>
+            <button type="button" class="popupButton" id="button2">Rules</button>
         </div>
-        <div id="woorden">Wordlist | Points</div>
     </div>
-    <div class="buttons">
-        <button type="button" disabled id="addWord">Add word</button>
-        <button type="button" id="undo">Undo</button>
-    </div>
-    <div id="word"></div>
-    <div id="resultaat"></div>
-    <script src="js/scripts.js"></script>
-    <script src="../server/server.js"></script>
+
+    <script src="js/home.js"></script>
 </body>
 
 </html>

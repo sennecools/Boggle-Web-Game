@@ -1,99 +1,167 @@
-/* Center the content */
+/*
+*********************************************
+*                                           *
+*                 Body                      *
+*                                           *
+*********************************************
+*/
 body {
   align-items: center;
   background-color: aquamarine;
   display: flex;
   flex-direction: column;
+  font-family: 'Lato', sans-serif;
   height: 100vh;
   justify-content: center;
 }
 
-/* Style the heading */
+#start {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/*
+*********************************************
+*                                           *
+*                   h's                     *
+*                                           *
+*********************************************
+*/
 h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-#button1 {
-  background-color: #c8d8e4;
-  background-repeat: no-repeat;
-  background-size: 3rem;
-  border-radius: 2rem;
-  border: 0.1rem solid rgb(0, 0, 0);
-  cursor: pointer;
-  display: block;
-  font-family: 'Bad Script', cursive;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  padding: 1rem 2rem;
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
-  text-decoration: solid;
-  width: 20rem;
-  margin-left: 10%;
 }
 
-#button1:hover {
-  background-color: rgb(25, 117, 183);
-  color: rgb(0, 0, 0);
-  transition: 400ms;
+/*
+*********************************************
+*                                           *
+*                 buttons                   *
+*                                           *
+*********************************************
+*/
+
+.buttons {
+  display: flex;
+  justify-content: center;
 }
 
-#button2 {
-  background-color: #c8d8e4;
-  background-repeat: no-repeat;
-  background-size: 3rem;
-  border-radius: 2rem;
-  border: 0.1rem solid rgb(0, 0, 0);
+#button2, #button1 {
+  background-color: rgb(88, 101, 242);
+  border-radius: 7px;
+  border: none;
+  color: #fff;
   cursor: pointer;
-  display: block;
-  font-family: 'Bad Script', cursive;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  padding: 1rem 2rem;
-  text-align: center;
-  text-decoration: solid;
-  width: 20rem;
-  margin-left: 10%;
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 500;
+  height: 80px;
+  line-height: 16px;
+  margin-bottom: 5px;
+  margin: 7px;
+  min-height: 38px;
+  min-width: 170px;
+  outline: none;
+  padding: 2px 16px;
+  transition: background-color .17s ease, color .17s ease;
 }
 
-#button2:hover {
-  background-color: rgb(25, 117, 183);
-  color: rgb(0, 0, 0);
-  transition: 400ms;
+#button2:hover, #button1:hover {
+  background-color: rgb(71, 82, 196);
 }
 
-.hidden{
+
+.popupButton2, #buttonlogin {
+  background-color: rgb(88, 101, 242);
+  border-radius: 3px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 38px;
+  line-height: 16px;
+  margin-bottom: 5px;
+  min-height: 38px;
+  min-width: 96px;
+  outline: none;
+  padding: 2px 16px;
+  transition: background-color .17s ease, color .17s ease;
+}
+
+.popupButton2:hover, #buttonlogin:hover {
+  background-color: rgb(71, 82, 196);
+}
+
+/*
+*********************************************
+*                                           *
+*                 extra's                   *
+*                                           *
+*********************************************
+*/
+
+.hidden {
   display: none;
 }
 
-#login{
-  position: center;
-  top: 50%;
-  left: 50%;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+#loginError {
+  color: red;
+  margin-bottom: 20px;
+}
+
+/*
+*********************************************
+*                                           *
+*                 Login                     *
+*                                           *
+*********************************************
+*/
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="email"], input[type="password"] {
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#login {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 20px;
 }
 
 #mail, #pass {
   display: block;
+  margin: 5px;
   text-align: right;
-}
-
-#buttonlogin{
-  background-color: #c8d8e4;
-  background-repeat: no-repeat;
-  background-size: 2rem;
-  border-radius: 2rem;
-  border: 0.1rem solid rgb(0, 0, 0);
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Bad Script', cursive;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  text-align: center;
-  text-decoration: solid;
-  width: 5rem;
-  margin-left: 30%;
-  margin-top: 15%;
 }

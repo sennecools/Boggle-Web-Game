@@ -15,7 +15,8 @@ const letterButtons = document.querySelectorAll('.letterButton');
 const resultaat = document.getElementById("resultaat");
 const wordDiv = document.querySelector("#word");
 document.querySelector("#addWord").addEventListener("click", addWordButton);
-document.querySelector("#undo").addEventListener("click", undoButton);
+document.querySelector("#undo").addEventListener("click", undoButtonClick);
+const undoButton = document.querySelector("#undo")
 let addWord = 0;
 let totalPoints = 0;
 let wordPointsArray = [];
@@ -63,7 +64,7 @@ function boardLetterButton(button) {
 }
 
 // Zet alle buttons terug aan, zet "woord" weer op NULL 
-function undoButton() {
+function undoButtonClick() {
     const addWordButton = document.querySelector("#addWord");
     const pressedButtons = document.querySelectorAll('.letterButton');
     const wordDiv = document.querySelector("#word");
@@ -94,12 +95,12 @@ async function addWordButton() {
 
     if (data.title == "No Definitions Found") {
         resultaat.innerText = `${word}: word doesn't exist`;
-        undoButton();
+        undoButtonClick();
     } else {
         const existingWord = wordPointsArray.find(w => w.word === word);
         if (existingWord) {
             resultaat.innerText = `${word}: word is has already been used`;
-            undoButton();
+            undoButtonClick();
             return;
         }
 
@@ -123,12 +124,12 @@ async function addWordButton() {
         totalPoints = wordPointsArray.reduce((acc, curr) => acc + curr.points, 0);
         let output = "";
         for (let i = 0; i < wordPointsArray.length; i++) {
-            output += `Word ${i + 1}: ${wordPointsArray[i].word}, Points: ${wordPointsArray[i].points}\n`;
+            output += `wordlist | points\n\nWord ${i + 1}: ${wordPointsArray[i].word}, Points: ${wordPointsArray[i].points}\n`;
         }
         woordDiv.innerText = output;
         console.log(wordPointsArray);
         console.log(totalPoints);
-        undoButton();
+        undoButtonClick();
     }
 }
 
@@ -221,6 +222,7 @@ const countdownInterval = setInterval(() => {
     if (timeLeft === 0) {
         clearInterval(countdownInterval);
         addButton.disabled = true;
+        undoButton.disabled = true;
         setTimeout(function () {
             letterButtons.forEach(button => {
                 button.disabled = true;

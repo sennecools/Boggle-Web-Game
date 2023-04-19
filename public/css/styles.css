@@ -1,3 +1,8 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: aquamarine;
+}
+
 /* CSS for the board cells */
 .cell {
     height: 80px;
@@ -5,111 +10,134 @@
     width: 80px;
 }
 
-/* CSS for the board container */
-#board {
-    background-color: #93CAED;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 360px;
-    margin: 0 auto; /* Center the board horizontally */
-    max-width: 100%; /* Ensure the board does not exceed the width of the page */
-    width: 360px;
-}  
-
 /* CSS for the letter buttons */
 .letterButton {
-    position: relative;
-    background-color: #ffffff;
-    border-radius: 5px;
-    color: #93CAED;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    color: #2D5377;
     font-size: 45px;
     font-weight: bold;
     height: 80px;
     transition-duration: 0.2s;
     width: 80px;
+    border: 0px solid #ccc;
+    box-shadow: -2px -4px 8px rgb(255 255 255 / 60%), 2px 4px 8px rgb(0 0 0 / 30%);
+    position: relative;
 }
-
-.letterButton::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 5px solid rgba(147, 202, 237, 0.5);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-}
-
-
 
 .pressed {
-    background-color: #EBECF0;
+    background-color: #b1adad;
 }
 
 /* Title */
 h1 {
-    text-align: center;
     font-size: 3rem;
     margin-top: 2rem;
+    text-align: center;
 }
 
 /* Timer */
 #timer {
-    text-align: center;
     font-size: 2rem;
     margin-top: 1rem;
+    text-align: center;
 }
 
 /* Buttons */
-.buttons{
+.buttons {
     text-align: center;
     margin-top: 50px;
 }
 
 #addWord, #undo {
-    background-color: #2196F3;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
+    background-color: rgb(88, 101, 242);
+    border-radius: 3px;
     border: none;
-    border-radius: 0.5rem;
-    margin-right: 1rem;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 500;
+    height: 38px;
+    line-height: 16px;
+    min-height: 64px;
+    min-width: 130px;
+    outline: none;
+    padding: 2px 16px;
+    transition: background-color .17s ease, color .17s ease;
+}
+
+#addword:hover, #undo:hover {
+    background-color: rgb(71, 82, 196);
 }
 
 /* tekst onder buttons */
 #word {
     display: none;
 }
-  
+
 #resultaat {
-    display: block;
-    margin: 20px auto 0; /* Center the divs horizontally */
-    text-align: center; /* Center the text inside the divs */
+    margin-top: 30px;
+    text-align: center;
+    font-size: 26px;
 }
 
 #woorden {
-    padding: 10px;
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    text-transform: lowercase;
+    border: 1px solid #ccc;
+    height: 400px;
     max-width: auto;
-    height: 360px;
     min-width: 120px;
-    overflow: auto; /* Add overflow property */
-    overflow-y: scroll; /* Add overflow-y property to show vertical scrollbar */
+    overflow-y: scroll;
+    overflow: auto;
+    padding: 10px;
+    text-transform: lowercase;
+    margin-left: 50px;
 }
 
 
-#bigboard{
+#bigboard {
     display: flex;
     margin-left: 30%;
     margin-right: 20%;
 }
 
-#addWord:disabled {
+#addWord:disabled, #undo:disabled {
     background-color: #105e9e;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*
+*********************************************
+*                                           *
+*                   grid                    *
+*                                           *
+*********************************************
+*/
+
+.grid {
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    border: 0px solid #ccc;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: inset -2px -3px 8px #fff, inset 2px 3px 8px rgb(0 0 0 / 30%);
+}
+
+.cell {
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
