@@ -20,7 +20,8 @@
 
 /* CSS for the letter buttons */
 .letterButton {
-    background-color: rgb(255, 255, 255);
+    position: relative;
+    background-color: #ffffff;
     border-radius: 5px;
     color: #93CAED;
     font-size: 45px;
@@ -29,6 +30,20 @@
     transition-duration: 0.2s;
     width: 80px;
 }
+
+.letterButton::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgba(147, 202, 237, 0.5);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+
 
 .pressed {
     background-color: #EBECF0;
