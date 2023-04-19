@@ -21,10 +21,11 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password">
             </div>
-            <button type="submit" id="buttonlogin">Login</button>
+            <div id="loginError"></div>
+            <button type="submit" disabled id="buttonlogin">Login</button>
         </form>
     </div>
-    <div id="start">
+    <div class="hidden" id="start">
         <h1>Let's Boggle together!</h1>
         <div class="buttons">
             <button type="button" class="startButton" id="button1">Let's start</button>

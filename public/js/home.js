@@ -1,8 +1,81 @@
+/*
+*********************************************
+*                                           *
+*            On webpage load                *
+*                                           *
+*********************************************
+*/
+
+let email = null;
+let password = null;
+const emailInput = document.getElementById('email');
+const loginButton = document.getElementById('buttonlogin');
+const passwordInput = document.getElementById('password');
 document.querySelector(".popupButton").addEventListener("click", showPopup);
 document.querySelector(".startButton").addEventListener("click", startGame);
+emailInput.addEventListener('input', updateLoginButtonState);
+passwordInput.addEventListener('input', updateLoginButtonState);
+
+/*
+*********************************************
+*                                           *
+*            Functions                      *
+*                                           *
+*********************************************
+*/
+
+loginButton.addEventListener('click', function (event) {
+  event.preventDefault();
+  email = emailInput.value;
+  password = passwordInput.value;
+  loginButtonClick();
+  // perform login logic here
+});
+
+async function loginButtonClick() {
+  var formdata = new FormData();
+  formdata.append("identity", email);
+  formdata.append("password", password);
+  
+  var requestOptions = {
+    method: 'POST',
+    body: formdata,
+    redirect: 'follow'
+  };
+  
+  fetch("https://lucas-miserez.be/api/collections/person/auth-with-password", requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      console.log(result)
+      if (result.record?.verified) {
+        console.log("log-in correct");
+        const loginDiv = document.querySelector("#login");
+        loginDiv.classList.add("hidden");
+        const startDiv = document.querySelector("#start")
+        startDiv.classList.remove("hidden");
+      } 
+      else {
+        console.log("log-in incorrect")
+        const loginError = document.querySelector("#loginError")
+        loginError.innerText = "Wrong credentials";
+      }
+      
+    })
+    .catch(error => console.log('error', error));
+}
+
+function updateLoginButtonState() {
+  if (emailInput.value && passwordInput.value) {
+    loginButton.disabled = false;
+  } else {
+    loginButton.disabled = true;
+  }
+}
+
 function startGame() {
   window.location.href = 'index.html';
 }
+
 function showPopup() {
   const message = `
   <!DOCTYPE html>

@@ -230,10 +230,3 @@ const countdownInterval = setInterval(() => {
         }, 500);
     }
 }, 1000);
-
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-        console.log("Hello, World!");
-        // submit function
-    }
-});

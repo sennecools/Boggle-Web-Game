@@ -63,12 +63,11 @@ h1 {
   transition: 400ms;
 }
 
-#start{
+.hidden{
   display: none;
 }
 
 #login{
-  display: block;
   position: center;
   top: 50%;
   left: 50%;

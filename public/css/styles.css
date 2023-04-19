@@ -99,10 +99,17 @@ h1 {
     max-width: auto;
     height: 360px;
     min-width: 120px;
+    overflow: auto; /* Add overflow property */
+    overflow-y: scroll; /* Add overflow-y property to show vertical scrollbar */
 }
+
 
 #bigboard{
     display: flex;
     margin-left: 30%;
     margin-right: 20%;
+}
+
+#addWord:disabled {
+    background-color: #105e9e;
 }
