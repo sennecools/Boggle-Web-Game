@@ -168,17 +168,17 @@ letterButtons.forEach(button => {
 
         // Enabled alle aanliggende buttons
         if (!isTopRow && !isLeftColumn) {
-            const topLeftButton = document.querySelector(`[data-square="${square - 5}"]`);
+            const topLeftButton = document.querySelector(`[data-square="${square - 4}"]`);
             topLeftButton.disabled = false;
         }
 
         if (!isTopRow) {
-            const topButton = document.querySelector(`[data-square="${square - 4}"]`);
+            const topButton = document.querySelector(`[data-square="${square - 3}"]`);
             topButton.disabled = false;
         }
 
         if (!isTopRow && !isRightColumn) {
-            const topRightButton = document.querySelector(`[data-square="${square - 3}"]`);
+            const topRightButton = document.querySelector(`[data-square="${square - 2}"]`);
             topRightButton.disabled = false;
         }
 
@@ -193,17 +193,17 @@ letterButtons.forEach(button => {
         }
 
         if (!isBottomRow && !isLeftColumn) {
-            const bottomLeftButton = document.querySelector(`[data-square="${square + 3}"]`);
+            const bottomLeftButton = document.querySelector(`[data-square="${square + 2}"]`);
             bottomLeftButton.disabled = false;
         }
 
         if (!isBottomRow) {
-            const bottomButton = document.querySelector(`[data-square="${square + 4}"]`);
+            const bottomButton = document.querySelector(`[data-square="${square + 3}"]`);
             bottomButton.disabled = false;
         }
 
         if (!isBottomRow && !isRightColumn) {
-            const bottomRightButton = document.querySelector(`[data-square="${square + 5}"]`);
+            const bottomRightButton = document.querySelector(`[data-square="${square + 4}"]`);
             bottomRightButton.disabled = false;
         }
 
