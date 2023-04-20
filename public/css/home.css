@@ -5,14 +5,23 @@
 *                                           *
 *********************************************
 */
+
 body {
   align-items: center;
-  background-color: aquamarine;
+  background-image: url('../img/background.png');
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   font-family: 'Lato', sans-serif;
   height: 100vh;
   justify-content: center;
+}
+
+
+
+img {
+  filter: blur(2px);
 }
 
 #start {
@@ -81,28 +90,28 @@ h2 {
 }
 
 
-.popupButton2, #buttonlogin {
-  background-color: rgb(88, 101, 242);
-  border-radius: 3px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 500;
-  height: 38px;
-  line-height: 16px;
-  margin-bottom: 5px;
-  min-height: 38px;
-  min-width: 96px;
-  outline: none;
-  padding: 2px 16px;
-  transition: background-color .17s ease, color .17s ease;
-}
+  .popupButton2, #buttonlogin {
+    background-color: rgb(88, 101, 242);
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 38px;
+    line-height: 16px;
+    margin-bottom: 5px;
+    min-height: 38px;
+    min-width: 96px;
+    outline: none;
+    padding: 2px 16px;
+    transition: background-color .17s ease, color .17s ease;
+  }
 
-.popupButton2:hover, #buttonlogin:hover {
-  background-color: rgb(71, 82, 196);
-}
+  .popupButton2:hover, #buttonlogin:hover {
+    background-color: rgb(71, 82, 196);
+  }
 
 /*
 *********************************************

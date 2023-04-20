@@ -14,7 +14,7 @@ const boardButtons = document.querySelectorAll("#board button");
 const letterButtons = document.querySelectorAll('.letterButton');
 const resultaat = document.getElementById("resultaat");
 const wordDiv = document.querySelector("#word");
-document.querySelector("#mode3x3").addEventListener("click", mode3x3Button);
+document.querySelector("#mode4x4").addEventListener("click", mode4x4Button);
 document.querySelector("#mode5x5").addEventListener("click", mode5x5Button);
 document.querySelector("#addWord").addEventListener("click", addWordButton);
 document.querySelector("#undo").addEventListener("click", undoButtonClick);
@@ -135,8 +135,8 @@ async function addWordButton() {
     }
 }
 
-function mode3x3Button() {
-    window.location.href= 'game3x3.html';
+function mode4x4Button() {
+    window.location.href= 'game.html';
 }
 
 function mode5x5Button() {
@@ -146,10 +146,10 @@ function mode5x5Button() {
 letterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const square = parseInt(button.dataset.square);
-        const isTopRow = square <= 4;
-        const isBottomRow = square >= 13;
-        const isLeftColumn = square % 4 === 1;
-        const isRightColumn = square % 4 === 0;
+        const isTopRow = square <= 3;
+        const isBottomRow = square >= 7;
+        const isLeftColumn = square % 3 === 1;
+        const isRightColumn = square % 3 === 0;
         button.classList.add("pressed");
         addWord++;
 

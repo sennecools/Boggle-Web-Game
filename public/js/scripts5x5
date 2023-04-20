@@ -14,8 +14,8 @@ const boardButtons = document.querySelectorAll("#board button");
 const letterButtons = document.querySelectorAll('.letterButton');
 const resultaat = document.getElementById("resultaat");
 const wordDiv = document.querySelector("#word");
+document.querySelector("#mode4x4").addEventListener("click", mode4x4Button);
 document.querySelector("#mode3x3").addEventListener("click", mode3x3Button);
-document.querySelector("#mode5x5").addEventListener("click", mode5x5Button);
 document.querySelector("#addWord").addEventListener("click", addWordButton);
 document.querySelector("#undo").addEventListener("click", undoButtonClick);
 const undoButton = document.querySelector("#undo")
@@ -135,26 +135,26 @@ async function addWordButton() {
     }
 }
 
-function mode3x3Button() {
-    window.location.href= 'game3x3.html';
+function mode4x4Button() {
+    window.location.href= 'game.html';
 }
 
-function mode5x5Button() {
-    window.location.href= 'game5x5.html';
+function mode3x3Button() {
+    window.location.href= 'game3x3.html';
 }
 
 letterButtons.forEach(button => {
     button.addEventListener('click', () => {
         const square = parseInt(button.dataset.square);
-        const isTopRow = square <= 4;
-        const isBottomRow = square >= 13;
-        const isLeftColumn = square % 4 === 1;
-        const isRightColumn = square % 4 === 0;
+        const isTopRow = square <= 5;
+        const isBottomRow = square >= 21;
+        const isLeftColumn = square % 5 === 1;
+        const isRightColumn = square % 5 === 0;
         button.classList.add("pressed");
         addWord++;
 
         // Zolang "addWord" niet groter is dan 2 is de addWord button disabled
-        if (addWord >= 3) {
+        if (addWord >= 4) {
             const addWord = document.querySelector("#addWord");
             addWord.disabled = false;
         }
